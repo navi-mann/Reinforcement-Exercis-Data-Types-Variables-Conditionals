@@ -1,5 +1,5 @@
 puts "Rate your appreciation for Documnetaries on a scale from one to five"
-  documnetaries = gets.chomp.downcase
+  documnetaries = gets.chomp.to_i
 puts "Rate your appreciation for Dramas on a scale from one to five"
   dramas = gets.chomp.to_i
 puts "Rate your appreciation for comedies on a scale from one to five"
@@ -8,7 +8,7 @@ puts "Rate your appreciation for comedies on a scale from one to five"
 def rating(documnetaries,dramas,comedies)
   if documnetaries >= 4
     puts "You should watch the Cosmos"
-  elsif documnetaries <= 3 && dramas >= 4 && comedies >=4
+  elsif documnetaries <= 3 && dramas >= 4 && comedies >= 4
     puts "You should watch the following Dramas:Saving Private Ryan and the following Comedey:White Girls"
   elsif dramas >= 4
     puts "You should watch Gilmore Girls!"
@@ -19,4 +19,4 @@ def rating(documnetaries,dramas,comedies)
   end
 end
 
-rating
+rating(documnetaries,dramas,comedies)
